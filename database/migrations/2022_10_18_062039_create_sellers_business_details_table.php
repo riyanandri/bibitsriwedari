@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('shop_pincode');
             $table->string('shop_phone');
             $table->string('shop_email');
-            $table->string('address_proof');
+            $table->string('shop_proof');
             $table->string('shop_proof_image');
             $table->string('business_license_number');
             $table->timestamps();

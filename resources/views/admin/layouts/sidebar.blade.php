@@ -18,6 +18,31 @@
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
+            @if (Auth::guard('admin')->user()->type=="seller")
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#accountSettings" role="button"
+                    aria-expanded="false" aria-controls="accountSettings">
+                    <i class="link-icon" data-feather="settings"></i>
+                    <span class="link-title">Detail Penjual</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="accountSettings">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ url('admin/update-seller-details/personal') }}" class="nav-link">Personal Detail</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('admin/update-seller-details/business') }}" class="nav-link">Bisnis Detail</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('admin/update-seller-details/bank') }}" class="nav-link">Bank Detail</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @else
+
+            @endif
             <li class="nav-item nav-category">web apps</li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false"

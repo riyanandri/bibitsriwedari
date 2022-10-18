@@ -54,17 +54,17 @@
                             <div class="mb-3">
                                 <label for="adminName" class="form-label">Nama</label>
                                 <input type="text" class="form-control" id="adminName"
-                                    value="{{ Auth::guard('admin')->user()->name }}" name="adminName" placeholder="Nama Lengkap" required>
+                                    value="{{ Auth::guard('admin')->user()->name }}" name="adminName" placeholder="Nama Lengkap">
                             </div>
                             <div class="mb-3">
                                 <label for="adminPhone" class="form-label">No Handphone</label>
                                 <input type="text" class="form-control" id="adminPhone"
                                     value="{{ Auth::guard('admin')->user()->phone }}" name="adminPhone" maxlength="12"
-                                    minlength="10" placeholder="Masukkan no handphone" required>
+                                    minlength="10" placeholder="Masukkan no handphone">
                             </div>
                             <div class="mb-3">
                                 <label for="adminPhoto" class="form-label">Foto</label>
-                                <input type="file" class="form-control" id="adminPhoto" name="adminPhoto" required>
+                                <input type="file" class="form-control" id="adminPhoto" name="adminPhoto">
                                 @if (!empty(Auth::guard('admin')->user()->image))
                                     <a target="_blank" href="{{ url('admin/assets/images/photos/'.Auth::guard('admin')->user()->image) }}">lihat foto</a>
                                     <input type="hidden" name="oldImage" value="{{ Auth::guard('admin')->user()->image }}">
